@@ -1,29 +1,29 @@
 # Ventas-de-una-empresa
+---
 
 
-
-# Investigación y Análisis del Tema
-
-
-
-
-# Diseño de la Base de Datos
+## Investigación y Análisis del Tema
 
 
 
 
-# Implementación de la Base de Datos
+## Diseño de la Base de Datos
 
 
 
 
-# Pruebas y Validación
+## Implementación de la Base de Datos
 
 
 
 
-# Conclusiones y Futuros Aportes
+## Pruebas y Validación
 
 
 
-# Referencias
+
+## Conclusiones y Futuros Aportes
+
+
+
+## Referencias
