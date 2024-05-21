@@ -3,7 +3,7 @@
 
 
 ## Investigación y Análisis del Tema
-Los datos que se
+Los datos que se están utilizando son 
 
 Tareas
 - Stiven Polo
