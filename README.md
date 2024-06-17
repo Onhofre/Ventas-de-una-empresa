@@ -73,7 +73,8 @@ Tareas.
      * ID_division: LLave foranea
      * ID_datospoblacion: LLave foranea
 
-###Diagrama 
+### Diagrama 
+
 ![DiagramaBD](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170148837/e863527e-bb9a-4622-8aef-be5e9698b3e0)
 
 ### Descripción del Diagrama de la Base de Datos
