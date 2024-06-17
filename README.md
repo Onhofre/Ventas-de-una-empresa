@@ -134,9 +134,18 @@ Este repositorio contiene el diagrama de la base de datos diseñado para gestion
 
 ### Relaciones entre Tablas
 
-- La tabla "fn3" actúa como una tabla de unión que conecta varias entidades principales: contratos, asesores, fechas, divisiones y datos de población.
-- Cada tabla tiene un identificador único (ixID_...) que se utiliza para definir relaciones con otras tablas.
-- Las relaciones están definidas mediante claves foráneas que aseguran la integridad referencial entre las diferentes entidades.
+- La tabla `fn3` actúa como una tabla de unión que conecta varias entidades principales: contratos, asesores, fechas, divisiones y datos de población.
+- Cada tabla tiene un identificador único (`ixID_...`) que se utiliza como clave primaria para definir relaciones con otras tablas.
+- Las relaciones están definidas mediante claves foráneas que aseguran la integridad referencial entre las diferentes entidades:
+  - `fn3` utiliza `ixID_Cuenta` como clave primaria y contiene claves foráneas como `Documento Asesor`, `ID_fecha`, `Contrato`, `ID_division`, y `ID_datos_poblacion` para conectar con `fn2_asesores`, `fn2_fechas`, `fn2_contrato`, `fn2_division`, y `fn2_datos_poblacion`, respectivamente.
+  - `fn2_contrato` contiene `Documento Asesor` como clave foránea para relacionarse con `fn2_asesores`.
+  - `fn2_fechas` contiene `Documento Asesor` como clave foránea para relacionarse con `fn2_asesores`.
+  - `fn2_clientes` contiene `ID_datospoblacion` como clave foránea para relacionarse con `fn2_datos_poblacion`.
+  - `fn2_division` se relaciona con `fn3` a través de la clave foránea `ID_division`.
+  - `fn2_datos_poblacion` se relaciona con `fn3` a través de la clave foránea `ID_datos_poblacion`.
+
+Estas claves foráneas permiten mantener la integridad referencial entre las tablas, asegurando que los datos estén correctamente vinculados y evitando inconsistencias en la base de datos.
+
 
 
 
