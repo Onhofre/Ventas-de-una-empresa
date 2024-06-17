@@ -28,6 +28,34 @@ Tareas.
 
 ## Diseño de la Base de Datos
 
+### Normalizacion
+
+- Teniendo en cuenta la tabla de ![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/a193a744-a328-490a-b5bd-ac1e4dd921ee) se comienza con la eliminar las columnas que no son necesarias para la implementacion de esta base de datos, no se tiene que  .
+  * Fecha Primer Checklist2
+  * Fecha Solución Entregada
+  * Fecha Recepción
+  * Cust
+  * Code1
+  * Min1
+  * Cust Code2
+  * Min2
+  * Cust Code3
+  * Min3
+  * Cust Code4
+  * Min4
+  * Cust Code5
+  * Min5
+  * Cust Code6
+  * Min6
+  * Fecha Consumo Leg AC
+  * Codigo Consumo Leg AC
+  * Descripcion Consumo Leg AC
+
+-    Normalizacion FN1: Se realiza la validacion y eliminacion de las columnas las cuales tienen elementos repetido, estos elementos los ingreso el la meta data de la base de dayos utilizada.
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/269a69bd-bd79-4c0a-a469-f670fa45da60)
+
+
 
 
 
