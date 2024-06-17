@@ -154,6 +154,117 @@ Estas claves foráneas permiten mantener la integridad referencial entre las tab
 
 ## Implementación de la Base de Datos
 
+1. *Obtener todos los contratos con sus respectivos asesores*:
+   sql
+   SELECT fn2_contrato.ixContrato, fn2_contrato.Base_Legal, fn2_asesores.Nombre_Asesor
+   FROM fn2_contrato
+   JOIN fn2_asesores ON fn2_contrato.Documento_Asesor = fn2_asesores.ixDocumento_Asesor;
+   
+
+2. *Listar todos los clientes y sus proyectos*:
+   sql
+   SELECT Nombre_Cliente, Apellido_del_Cliente, Proyecto
+   FROM fn2_clientes;
+   
+
+3. *Encontrar las fechas de venta y custodia para cada contrato*:
+   sql
+   SELECT fn2_fechas.Fecha_de_Venta, fn2_fechas.Fecha_Custodia, fn2_contrato.ixContrato
+   FROM fn2_fechas
+   JOIN fn2_contrato ON fn2_fechas.Documento_Asesor = fn2_contrato.Documento_Asesor;
+   
+
+4. *Contar el número de clientes por cada tipo de documento*:
+   sql
+   SELECT Tipo_de_Documento, COUNT(*) AS Numero_de_Clientes
+   FROM fn2_clientes
+   GROUP BY Tipo_de_Documento;
+   
+
+5. *Obtener la lista de divisiones con su descripción y zona*:
+   sql
+   SELECT Division, GV_Descripcion_2, Zona
+   FROM fn2_division;
+   
+
+6. *Mostrar todos los asesores y la cantidad de contratos asociados a cada uno*:
+   sql
+   SELECT fn2_asesores.Nombre_Asesor, COUNT(fn2_contrato.ixContrato) AS Numero_de_Contratos
+   FROM fn2_asesores
+   JOIN fn2_contrato ON fn2_asesores.ixDocumento_Asesor = fn2_contrato.Documento_Asesor
+   GROUP BY fn2_asesores.Nombre_Asesor;
+   
+
+7. *Listar todos los contratos y sus datos de población asociados*:
+   sql
+   SELECT fn2_contrato.ixContrato, fn2_datos_poblacion.Estrato, fn2_datos_poblacion.Distrito
+   FROM fn2_contrato
+   JOIN fn2_datos_poblacion ON fn2_contrato.Documento_Asesor = fn2_datos_poblacion.ixID_datospoblacion;
+   
+
+8. *Obtener los contratos y sus divisiones asociadas*:
+   sql
+   SELECT fn2_contrato.ixContrato, fn2_division.Division
+   FROM fn2_contrato
+   JOIN fn3 ON fn2_contrato.ixContrato = fn3.Contrato
+   JOIN fn2_division ON fn3.ID_division = fn2_division.ixID_division;
+   
+
+9. *Encontrar el asesor con más contratos*:
+   sql
+   SELECT fn2_asesores.Nombre_Asesor, COUNT(fn2_contrato.ixContrato) AS Numero_de_Contratos
+   FROM fn2_asesores
+   JOIN fn2_contrato ON fn2_asesores.ixDocumento_Asesor = fn2_contrato.Documento_Asesor
+   GROUP BY fn2_asesores.Nombre_Asesor
+   ORDER BY Numero_de_Contratos DESC
+   LIMIT 1;
+   
+
+10. *Listar todos los proyectos especiales de los clientes*:
+    sql
+    SELECT Nombre_Cliente, Proyecto_Especial
+    FROM fn2_clientes
+    WHERE Proyecto_Especial IS NOT NULL;
+    
+
+11. *Obtener los detalles de los contratos realizados en una fecha específica*:
+    sql
+    SELECT fn2_contrato.ixContrato, fn2_contrato.Base_Legal, fn2_fechas.Fecha_de_Venta
+    FROM fn2_contrato
+    JOIN fn3 ON fn2_contrato.ixContrato = fn3.Contrato
+    JOIN fn2_fechas ON fn3.ID_fecha = fn2_fechas.ixID_fecha
+    WHERE fn2_fechas.Fecha_de_Venta = '2023-01-01';
+    
+
+12. *Encontrar las divisiones que tienen una zona específica*:
+    sql
+    SELECT Division, Estrato, Distrito
+    FROM fn2_division
+    WHERE Zona = 'Zona 1';
+    
+
+13. *Listar todos los contratos y sus clientes asociados*:
+    sql
+    SELECT fn2_contrato.ixContrato, fn2_clientes.Nombre_Cliente
+    FROM fn2_contrato
+    JOIN fn3 ON fn2_contrato.ixContrato = fn3.Contrato
+    JOIN fn2_clientes ON fn3.ixID_Cuenta = fn2_clientes.ixID_Cuenta;
+    
+
+14. *Obtener los datos de población para un cliente específico*:
+    sql
+    SELECT fn2_clientes.Nombre_Cliente, fn2_datos_poblacion.Estrato, fn2_datos_poblacion.Distrito
+    FROM fn2_clientes
+    JOIN fn2_datos_poblacion ON fn2_clientes.ID_datospoblacion = fn2_datos_poblacion.ixID_datospoblacion
+    WHERE fn2_clientes.Nombre_Cliente = 'Juan Perez';
+    
+
+15. *Encontrar todos los clientes y sus asesores asociados*:
+    sql
+    SELECT fn2_clientes.Nombre_Cliente, fn2_asesores.Nombre_Asesor
+    FROM fn2_clientes
+    JOIN fn3 ON fn2_clientes.ixID_Cuenta = fn3.ixID_Cuenta
+    JOIN fn2_asesores ON fn3.Documento_Asesor = fn2_asesores.ixDocumento_Asesor;
 
 
 
