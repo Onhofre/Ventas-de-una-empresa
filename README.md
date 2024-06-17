@@ -145,7 +145,6 @@ Este repositorio contiene el diagrama de la base de datos diseñado para gestion
 
 ## Implementación de la Base de Datos
 
-![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/ec51b0b2-5633-44eb-a079-b50ddcb1f87b)
 
 
 
