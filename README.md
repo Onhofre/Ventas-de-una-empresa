@@ -57,24 +57,22 @@ Tareas.
 
 
 -    Normalizacion FN2:
-  
-   * FN2_Asesores: Documento Asesor	|| Nombre Asesor
-  *   FN2_Clientes: ID_Cuenta ||	O.T	|| Proyecto Especial	|| Proyecto	|| Apellido del Cliente	|| Nombre de Cliente || Tipo de Documento ||	Documento de Cliente ||	Proyectos	|| ID_datospoblacion
-  *   FN2_Contrato: Contrato ||	Base Legal ||	Fuente	|| Tipo de Venta ||	Origen	|| Documento Asesor
-  *   FN2_Datos_poblacion: ID_datospoblacion	|| Estrato	|| Distrito	|| GV Descripción 2	|| Población	|| Origen ||	Zona	|| Fuente
-  *   FN2_Fechas: ID_fecha	|| Fecha de Venta	|| Fecha Estado	|| Fecha Custodia	|| Fecha Digitalizado y Archivado	|| Documento Asesor
-  *   FN3: ID_Cuenta	|| Documento Asesor	|| ID_fecha	|| Contrato	|| ID_division	|| ID_datospoblacion
+     * FN2_Asesores: Documento Asesor	|| Nombre Asesor
+     * FN2_Clientes: ID_Cuenta ||	O.T	|| Proyecto Especial	|| Proyecto	|| Apellido del Cliente	|| Nombre de Cliente || Tipo de Documento ||	Documento de Cliente ||	Proyectos	|| ID_datospoblacion
+     * FN2_Contrato: Contrato ||	Base Legal ||	Fuente	|| Tipo de Venta ||	Origen	|| Documento Asesor
+     * FN2_Datos_poblacion: ID_datospoblacion	|| Estrato	|| Distrito	|| GV Descripción 2	|| Población	|| Origen ||	Zona	|| Fuente
+     * FN2_Fechas: ID_fecha	|| Fecha de Venta	|| Fecha Estado	|| Fecha Custodia	|| Fecha Digitalizado y Archivado	|| Documento Asesor
+     * FN3: ID_Cuenta	|| Documento Asesor	|| ID_fecha	|| Contrato	|| ID_division	|| ID_datospoblacion
 
 ![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/f6471cf6-0ef1-4b98-82dd-80bbcc366814)
 
--    Normalizacion FN2:
-  
-  *   ID_Cuenta: LLave foranea 
-  *   Documento Asesor: LLave foranea
-  *   ID_fecha: LLave foranea
-  *   Contrato: LLave foranea
-  *   ID_division: LLave foranea
-  *   ID_datospoblacion: LLave foranea
+-    Normalizacion FN3:
+     * ID_Cuenta: LLave foranea
+     * Documento Asesor: LLave foranea
+     * ID_fecha: LLave foranea
+     * Contrato: LLave foranea
+     * ID_division: LLave foranea
+     * ID_datospoblacion: LLave foranea
 
 
 
