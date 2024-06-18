@@ -148,8 +148,73 @@ Estas claves foráneas permiten mantener la integridad referencial entre las tab
 
 ## Implementación de la Base de Datos
 
+###Ingreso de datos:
 
+Creamos la DB
 
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/afaa0674-be9b-4045-8872-8f039be4e9ab)
+
+Los datos los ingresamos por workbench, ya que se tenian normalizada las tablas se subieron de manera directamas no por consola
+
+* Paso 1
+  
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/1cab2b3c-673e-4b4c-842f-26a7cfdfbafb)
+
+* Paso 2
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/c778a016-67cd-47a2-8a54-31b272db688a)
+
+* Paso 3
+  
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/46de3fdc-b855-4a1c-a534-adc40e029a69)
+
+* Paso 4
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/33e8f87f-f3d0-4cc5-80d5-78fe54aa5edf)
+
+* Paso 5
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/ea6871d0-00b4-415c-a773-beada0f74972)
+
+* Paso 6
+
+Se realiza el mismo proceso con cada una de las tablas que se necesitan ingresar
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/ed4de08d-ac7c-43a5-8ce7-c6d8b8ffde99)
+
+###Creacion del diaframa
+
+Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch 
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/83b68d1e-7d3f-488e-b8ea-e20429f2d997)
+
+* Paso 1
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/52481867-dbd3-4af4-8162-cc5583e40b4c)
+
+* Paso 2
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/0a8ec1b4-178a-4d8e-ab13-15786b0c7e0d)
+
+ * Paso 3: Seleccionamos el BD del cual queremos el digrama
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/8ea29170-2b7b-479c-98fc-cae75c1deafb)
+
+* Paso 4
+  
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/7b65b628-f471-4b40-867a-8d1405a94907)
+
+* Paso 5
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/4a4d87d8-ab95-45ff-a009-f2db145e7181)
+
+* Paso 6: Para dar la llave primaria a la columna que necesitemos
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/c87893b3-70b0-4520-a2c7-c4f7f54ecc33)
+
+* Paso 7: para dar llave foranea a la columna que necesitemos
+
+![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/f1f4f4a9-5e5d-4dd1-8f91-762e5edfb3d0)
 
 
 ## Pruebas y Validación
