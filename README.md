@@ -146,12 +146,6 @@ Este repositorio contiene el diagrama de la base de datos diseñado para gestion
 
 Estas claves foráneas permiten mantener la integridad referencial entre las tablas, asegurando que los datos estén correctamente vinculados y evitando inconsistencias en la base de datos.
 
-
-
-
-
-
-
 ## Implementación de la Base de Datos
 
 
