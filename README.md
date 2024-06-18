@@ -243,14 +243,14 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
    JOIN fn2_asesores ON fn2_contrato.Documento_Asesor = fn2_asesores.ixDocumento_Asesor;
 ```
 
-3. *Listar todos los clientes y sus proyectos*:
+2. *Listar todos los clientes y sus proyectos*:
    sql
 ```sql
 SELECT Nombre_Cliente, Apellido_del_Cliente, Proyecto
 FROM fn2_clientes;
 ```   
 
-5. *Encontrar las fechas de venta y custodia para cada contrato*:
+3. *Encontrar las fechas de venta y custodia para cada contrato*:
    sql
 ```sql
 SELECT fn2_fechas.Fecha_de_Venta, fn2_fechas.Fecha_Custodia, fn2_contrato.ixContrato
@@ -258,7 +258,7 @@ FROM fn2_fechas
 JOIN fn2_contrato ON fn2_fechas.Documento_Asesor = fn2_contrato.Documento_Asesor;
 ```   
 
-7. *Contar el número de clientes por cada tipo de documento*:
+4. *Contar el número de clientes por cada tipo de documento*:
    sql
 ```sql
 SELECT Tipo_de_Documento, COUNT(*) AS Numero_de_Clientes
@@ -266,14 +266,14 @@ FROM fn2_clientes
 GROUP BY Tipo_de_Documento;
 ```
 
-9. *Obtener la lista de divisiones con su descripción y zona*:
+5. *Obtener la lista de divisiones con su descripción y zona*:
    sql
 ```sql
 SELECT Division, GV_Descripcion_2, Zona
 FROM fn2_division;
 ```
 
-11. *Mostrar todos los asesores y la cantidad de contratos asociados a cada uno*:
+6. *Mostrar todos los asesores y la cantidad de contratos asociados a cada uno*:
    sql
 
 ```sql
@@ -283,7 +283,7 @@ JOIN fn2_contrato ON fn2_asesores.ixDocumento_Asesor = fn2_contrato.Documento_As
 GROUP BY fn2_asesores.Nombre_Asesor;
 ```
    
-13. *Listar todos los contratos y sus datos de población asociados*:
+7. *Listar todos los contratos y sus datos de población asociados*:
    sql
 
 ```sql
@@ -292,7 +292,7 @@ FROM fn2_contrato
 JOIN fn2_datos_poblacion ON fn2_contrato.Documento_Asesor = fn2_datos_poblacion.ixID_datospoblacion;
 ```
 
-15. *Obtener los contratos y sus divisiones asociadas*:
+8. *Obtener los contratos y sus divisiones asociadas*:
    sql
 ```sql
 SELECT fn2_contrato.ixContrato, fn2_division.Division
@@ -300,7 +300,7 @@ FROM fn2_contrato
 JOIN fn3 ON fn2_contrato.ixContrato = fn3.Contrato
 JOIN fn2_division ON fn3.ID_division = fn2_division.ixID_division;
 ```
-17. *Encontrar el asesor con más contratos*:
+9. *Encontrar el asesor con más contratos*:
 sql
 ```sql
 SELECT fn2_asesores.Nombre_Asesor, COUNT(fn2_contrato.ixContrato) AS Numero_de_Contratos
@@ -311,7 +311,7 @@ ORDER BY Numero_de_Contratos DESC
 LIMIT 1;
 ```
 
-19. *Listar todos los proyectos especiales de los clientes*:
+10. *Listar todos los proyectos especiales de los clientes*:
     sql
 ```sql
 SELECT Nombre_Cliente, Proyecto_Especial
@@ -319,7 +319,7 @@ FROM fn2_clientes
 WHERE Proyecto_Especial IS NOT NULL;
 ```    
 
-21. *Obtener los detalles de los contratos realizados en una fecha específica*:
+11. *Obtener los detalles de los contratos realizados en una fecha específica*:
     sql
 ```sql
 SELECT fn2_contrato.ixContrato, fn2_contrato.Base_Legal, fn2_fechas.Fecha_de_Venta
@@ -329,7 +329,7 @@ JOIN fn2_fechas ON fn3.ID_fecha = fn2_fechas.ixID_fecha
 WHERE fn2_fechas.Fecha_de_Venta = '2023-01-01';
 ```
     
-23. *Encontrar las divisiones que tienen una zona específica*:
+12. *Encontrar las divisiones que tienen una zona específica*:
     sql
 ```sql
 SELECT Division, Estrato, Distrito
@@ -337,7 +337,7 @@ FROM fn2_division
 WHERE Zona = 'Zona 1';
 ```    
 
-24. *Listar todos los contratos y sus clientes asociados*:
+13. *Listar todos los contratos y sus clientes asociados*:
     sql
 
 ```sql
@@ -348,7 +348,7 @@ JOIN fn2_clientes ON fn3.ixID_Cuenta = fn2_clientes.ixID_Cuenta;
 
 ```
 
-26. *Obtener los datos de población para un cliente específico*:
+14. *Obtener los datos de población para un cliente específico*:
     sql
 ```sql
 SELECT fn2_clientes.Nombre_Cliente, fn2_datos_poblacion.Estrato, fn2_datos_poblacion.Distrito
