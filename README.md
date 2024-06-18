@@ -234,128 +234,80 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 
 ## Pruebas y Validación
 
-1. *Obtener todos los contratos con sus respectivos asesores*:
-   sql
-   
-```sql
-   SELECT fn2_contrato.ixContrato, fn2_contrato.Base_Legal, fn2_asesores.Nombre_Asesor
-   FROM fn2_contrato
-   JOIN fn2_asesores ON fn2_contrato.Documento_Asesor = fn2_asesores.ixDocumento_Asesor;
-```
+1. Listar todos los asesores:
+   ```sql
+   SELECT * FROM fn2_asesores;
+   ```
 
-2. *Listar todos los clientes y sus proyectos*:
-   sql
-```sql
-SELECT Nombre_Cliente, Apellido_del_Cliente, Proyecto
-FROM fn2_clientes;
-```   
+2. Buscar contratos por tipo de venta específico:
+   ```sql
+   SELECT Contrato, Tipo_de_Venta FROM fn2_contrato WHERE Tipo_de_Venta = 'Venta Directa';
+   ```
 
-3. *Encontrar las fechas de venta y custodia para cada contrato*:
-   sql
-```sql
-SELECT fn2_fechas.Fecha_de_Venta, fn2_fechas.Fecha_Custodia, fn2_contrato.ixContrato
-FROM fn2_fechas
-JOIN fn2_contrato ON fn2_fechas.Documento_Asesor = fn2_contrato.Documento_Asesor;
-```   
+3. Contar el número de contratos por origen:
+   ```sql
+   SELECT Origen, COUNT(*) AS Total_Contratos FROM fn2_contrato GROUP BY Origen;
+   ```
 
-4. *Contar el número de clientes por cada tipo de documento*:
-   sql
-```sql
-SELECT Tipo_de_Documento, COUNT(*) AS Numero_de_Clientes
-FROM fn2_clientes
-GROUP BY Tipo_de_Documento;
-```
+4. Obtener detalles de población por estrato y distrito:
+   ```sql
+   SELECT Estrato, Distrito, Población FROM fn2_datos_poblacion;
+   ```
 
-5. *Obtener la lista de divisiones con su descripción y zona*:
-   sql
-```sql
-SELECT Division, GV_Descripcion_2, Zona
-FROM fn2_division;
-```
+5. Listar divisiones con población superior a cierto valor:
+   ```sql
+   SELECT División, Población FROM fn2_division WHERE Población > 50000;
+   ```
 
-6. *Mostrar todos los asesores y la cantidad de contratos asociados a cada uno*:
-   sql
+6. Encontrar fechas de venta para un asesor específico:
+   ```sql
+   SELECT Fecha_de_Venta FROM fn2_fechas WHERE Documento_Asesor = 12345;
+   ```
 
-```sql
-SELECT fn2_asesores.Nombre_Asesor, COUNT(fn2_contrato.ixContrato) AS Numero_de_Contratos
-FROM fn2_asesores
-JOIN fn2_contrato ON fn2_asesores.ixDocumento_Asesor = fn2_contrato.Documento_Asesor
-GROUP BY fn2_asesores.Nombre_Asesor;
-```
-   
-7. *Listar todos los contratos y sus datos de población asociados*:
-   sql
+7. Buscar contratos por fecha de custodia:
+   ```sql
+   SELECT Contrato, Fecha_Custodia FROM fn2_contrato JOIN fn2_fechas ON fn2_contrato.Documento_Asesor = fn2_fechas.Documento_Asesor WHERE Fecha_Custodia >= '2023-01-01';
+   ```
 
-```sql
-SELECT fn2_contrato.ixContrato, fn2_datos_poblacion.Estrato, fn2_datos_poblacion.Distrito
-FROM fn2_contrato
-JOIN fn2_datos_poblacion ON fn2_contrato.Documento_Asesor = fn2_datos_poblacion.ixID_datospoblacion;
-```
+8. Listar contratos y sus divisiones asociadas:
+   ```sql
+   SELECT fn2_contrato.Contrato, fn2_division.División FROM fn2_contrato JOIN fn3 ON fn2_contrato.Contrato = fn3.Contrato JOIN fn2_division ON fn3.ID_division = fn2_division.ID_division;
+   ```
 
-8. *Obtener los contratos y sus divisiones asociadas*:
-   sql
-```sql
-SELECT fn2_contrato.ixContrato, fn2_division.Division
-FROM fn2_contrato
-JOIN fn3 ON fn2_contrato.ixContrato = fn3.Contrato
-JOIN fn2_division ON fn3.ID_division = fn2_division.ixID_division;
-```
-9. *Encontrar el asesor con más contratos*:
-sql
-```sql
-SELECT fn2_asesores.Nombre_Asesor, COUNT(fn2_contrato.ixContrato) AS Numero_de_Contratos
-FROM fn2_asesores
-JOIN fn2_contrato ON fn2_asesores.ixDocumento_Asesor = fn2_contrato.Documento_Asesor
-GROUP BY fn2_asesores.Nombre_Asesor
-ORDER BY Numero_de_Contratos DESC
-LIMIT 1;
-```
+9. Contar el número de ventas por fecha:
+   ```sql
+   SELECT Fecha_de_Venta, COUNT(*) AS Total_Ventas FROM fn2_fechas GROUP BY Fecha_de_Venta;
+   ```
 
-10. *Listar todos los proyectos especiales de los clientes*:
-    sql
-```sql
-SELECT Nombre_Cliente, Proyecto_Especial
-FROM fn2_clientes
-WHERE Proyecto_Especial IS NOT NULL;
-```    
+10. Buscar contratos por tipo de legalización y origen:
+    ```sql
+    SELECT Contrato, Base_Legal, Origen FROM fn2_contrato WHERE Base_Legal = 'Legalizado' AND Origen = 'Online';
+    ```
 
-11. *Obtener los detalles de los contratos realizados en una fecha específica*:
-    sql
-```sql
-SELECT fn2_contrato.ixContrato, fn2_contrato.Base_Legal, fn2_fechas.Fecha_de_Venta
-FROM fn2_contrato
-JOIN fn3 ON fn2_contrato.ixContrato = fn3.Contrato
-JOIN fn2_fechas ON fn3.ID_fecha = fn2_fechas.ixID_fecha
-WHERE fn2_fechas.Fecha_de_Venta = '2023-01-01';
-```
-    
-12. *Encontrar las divisiones que tienen una zona específica*:
-    sql
-```sql
-SELECT Division, Estrato, Distrito
-FROM fn2_division
-WHERE Zona = 'Zona 1';
-```    
+11. Obtener detalles de asesor por documento específico:
+    ```sql
+    SELECT * FROM fn2_asesores WHERE Documento_Asesor = 56789;
+    ```
 
-13. *Listar todos los contratos y sus clientes asociados*:
-    sql
+12. Listar clientes y sus proyectos especiales:
+    ```sql
+    SELECT Nombre_Cliente, Proyecto_Especial FROM fn2_clientes WHERE Proyecto_Especial IS NOT NULL;
+    ```
 
-```sql
-SELECT fn2_contrato.ixContrato, fn2_clientes.Nombre_Cliente
-FROM fn2_contrato
-JOIN fn3 ON fn2_contrato.ixContrato = fn3.Contrato
-JOIN fn2_clientes ON fn3.ixID_Cuenta = fn2_clientes.ixID_Cuenta;
+13. Encontrar asesores con más contratos asignados:
+    ```sql
+    SELECT Nombre_Asesor, COUNT(fn2_contrato.Contrato) AS Total_Contratos FROM fn2_asesores JOIN fn2_contrato ON fn2_asesores.Documento_Asesor = fn2_contrato.Documento_Asesor GROUP BY Nombre_Asesor ORDER BY Total_Contratos DESC;
+    ```
 
-```
+14. Buscar clientes por tipo de documento y contarlos:
+    ```sql
+    SELECT Tipo_de_Documento, COUNT(*) AS Total_Clientes FROM fn2_clientes GROUP BY Tipo_de_Documento;
+    ```
 
-14. *Obtener los datos de población para un cliente específico*:
-    sql
-```sql
-SELECT fn2_clientes.Nombre_Cliente, fn2_datos_poblacion.Estrato, fn2_datos_poblacion.Distrito
-FROM fn2_clientes
-JOIN fn2_datos_poblacion ON fn2_clientes.ID_datospoblacion = fn2_datos_poblacion.ixID_datospoblacion
-WHERE fn2_clientes.Nombre_Cliente = 'Juan Perez';
-```
+15. Listar todos los contratos con sus fechas de custodia y digitalización:
+    ```sql
+    SELECT fn2_contrato.Contrato, fn2_fechas.Fecha_Custodia, fn2_fechas.Fecha_Digitalizado_y_Archivado FROM fn2_contrato JOIN fn2_fechas ON fn2_contrato.Documento_Asesor = fn2_fechas.Documento_Asesor;
+    ```
     
 ## Conclusiones y Futuros Aportes
 
