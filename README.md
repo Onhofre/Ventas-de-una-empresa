@@ -2,7 +2,7 @@
 ---
 
 ## OBJETIVOS
-###Objetivo General
+### Objetivo General
 Diseñar, desarrollar e implementar una base de datos relacional eficiente y funcional.
 
 ### Objetivos Específicos
