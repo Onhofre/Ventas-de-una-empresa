@@ -359,6 +359,10 @@ WHERE fn2_clientes.Nombre_Cliente = 'Juan Perez';
     
 ## Conclusiones y Futuros Aportes
 
+* Eficiencia en la Normalización: La normalización efectiva ha eliminado redundancias, asegurando la coherencia de los datos y facilitando su gestión.
 
+* Diseño Estructurado: El diseño organizado de la base de datos garantiza relaciones claras entre contratos, asesores, fechas, clientes, divisiones y datos de población.
+
+* Implementación Exitosa: La implementación en MySQL Workbench facilitó el ingreso de datos y la creación del diagrama, preparando la base de datos para uso operativo.
 
 ## Referencias
