@@ -1,6 +1,15 @@
 # ProyectoPAR
 ---
 
+## OBJETIVOS
+###Objetivo General
+Diseñar, desarrollar e implementar una base de datos relacional eficiente y funcional.
+
+### Objetivos Específicos
+* Investigar y analizar el problema y requisitos.
+* Diseñar el esquema de la base de datos.
+* Implementar la base de datos en MySQL.
+* Realizar pruebas y validar la base de datos.
 
 ## Investigación y Análisis del Tema
 
