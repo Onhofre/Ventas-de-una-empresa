@@ -163,7 +163,7 @@ Estas claves foráneas permiten mantener la integridad referencial entre las tab
 
 ## Implementación de la Base de Datos
 
-###Ingreso de datos:
+### Ingreso de datos:
 
 Creamos la DB
 
@@ -197,7 +197,7 @@ Se realiza el mismo proceso con cada una de las tablas que se necesitan ingresar
 
 ![image](https://github.com/Onhofre/Ventas-de-una-empresa/assets/170147666/ed4de08d-ac7c-43a5-8ce7-c6d8b8ffde99)
 
-###Creacion del diaframa
+### Creacion del diagrama
 
 Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch 
 
