@@ -1,17 +1,17 @@
 # ProyectoPAR
 ---
 ## Tabla de Contenido
-  - [Tabla de Contenido]
-  - [Objetivo]
-  - [Tema Seleccionado]
-  - [Almacenamiento del Proyecto]
-  - [Tareas del Proyecto]
-      - [1. Investigación y Análisis del Tema]
-      - [2. Diseño de la Base de Datos]
-      - [3. Implementación de la Base de Datos]
-      - [4. Pruebas y Validación]
-      - [6. Conclusiones y Futuros Aportes]
-      - [7. Referencias]
+  - Tabla de Contenido
+  - Objetivo
+  - Tema Seleccionado
+  - Almacenamiento del Proyecto
+  - Tareas del Proyecto
+      - 1. Investigación y Análisis del Tema
+      - 2. Diseño de la Base de Datos
+      - 3. Implementación de la Base de Datos
+      - 4. Pruebas y Validación
+      - 6. Conclusiones y Futuros Aportes
+      - 7. Referencias
   
     
 ## OBJETIVOS
