@@ -286,7 +286,7 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 
 11. Obtener detalles de asesor por documento específico:
     ```sql
-    SELECT * FROM fn2_asesores WHERE Documento_Asesor = 56789;
+    SELECT * FROM fn2_asesores WHERE ï»¿Documento_Asesor = 56789;
     ```
 
 12. Listar clientes y sus proyectos especiales:
