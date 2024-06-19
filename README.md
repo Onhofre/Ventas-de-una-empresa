@@ -316,6 +316,7 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 * Diseño Estructurado: El diseño organizado de la base de datos garantiza relaciones claras entre contratos, asesores, fechas, clientes, divisiones y datos de población.
 
 * Implementación Exitosa: La implementación en MySQL Workbench facilitó el ingreso de datos y la creación del diagrama, preparando la base de datos para uso operativo.
+* La realización del proyecto se dificulto al final ya que no al final de este nuestro tercer compañero no participó.
 
 ## Referencias
 
