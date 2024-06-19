@@ -266,7 +266,7 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 
 7. Buscar contratos por fecha de custodia:
    ```sql
-   SELECT Contrato, Fecha_Custodia FROM fn2_contrato JOIN fn2_fechas ON fn2_contrato.Documento_Asesor = fn2_fechas.Documento_Asesor WHERE Fecha_Custodia >= '2023-01-01';
+   SELECT ï»¿Contrato, Fecha_Custodia FROM fn2_contrato JOIN fn2_fechas ON fn2_contrato.Documento_Asesor = fn2_fechas.Documento_Asesor WHERE Fecha_Custodia >= '2023-01-01';
    ```
 
 8. Listar contratos y sus divisiones asociadas:
