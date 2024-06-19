@@ -269,9 +269,9 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
    SELECT ï»¿Contrato, Fecha_Custodia FROM fn2_contrato JOIN fn2_fechas ON fn2_contrato.Documento_Asesor = fn2_fechas.Documento_Asesor WHERE Fecha_Custodia >= '2023-01-01';
    ```
 
-8. Listar contratos y sus divisiones asociadas:
+8. Contar el número de ventas por estado:
    ```sql
-   SELECT fn2_contrato.Contrato, fn2_division.División FROM fn2_contrato JOIN fn3 ON fn2_contrato.Contrato = fn3.Contrato JOIN fn2_division ON fn3.ID_division = fn2_division.ID_division;
+   SELECT Fecha_Estado, COUNT(*) AS Total_Ventas FROM fn2_fechas GROUP BY Fecha_Estado;
    ```
 
 9. Contar el número de ventas por fecha:
