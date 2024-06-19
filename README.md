@@ -318,3 +318,10 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 * Implementación Exitosa: La implementación en MySQL Workbench facilitó el ingreso de datos y la creación del diagrama, preparando la base de datos para uso operativo.
 
 ## Referencias
+
+https://github.com/saguileran/ETITC-2024-1/blob/main/DataBases_I/ProjectGuideLines.md#6-conclusiones-y-futuros-aportes
+https://github.com/saguileran/ETITC-2024-1/blob/main/DataBases_I/Normalizaci%C3%B3n.md
+https://github.com/saguileran/ETITC-2024-1/blob/main/DataBases_I/MYSQL_relaciones.md
+https://github.com/saguileran/ETITC-2024-1/blob/main/DataBases_I/MYSQL_operaciones.md
+https://github.com/saguileran/ETITC-2024-1/blob/main/DataBases_I/Transact-SQL.md
+https://chatgpt.com/
