@@ -281,7 +281,7 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 
 10. Buscar contratos por tipo de legalización y origen:
     ```sql
-    SELECT Contrato, Base_Legal, Origen FROM fn2_contrato WHERE Base_Legal = 'Legalizado' AND Origen = 'Online';
+    SELECT ï»¿Contrato, Base_Legal, Origen FROM fn2_contrato WHERE Base_Legal = 'Legalizado' AND Origen = 'Online';
     ```
 
 11. Obtener detalles de asesor por documento específico:
