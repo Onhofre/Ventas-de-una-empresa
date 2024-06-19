@@ -291,7 +291,7 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 
 12. Listar clientes y sus proyectos especiales:
     ```sql
-    SELECT Nombre_Cliente, Proyecto_Especial FROM fn2_clientes WHERE Proyecto_Especial IS NOT NULL;
+    SELECT Nombre_de_Cliente, Proyecto_Especial FROM fn2_clientes WHERE Proyecto_Especial IS NOT NULL;
     ```
 
 13. Encontrar asesores con más contratos asignados:
