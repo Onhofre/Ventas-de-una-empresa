@@ -254,9 +254,9 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
    SELECT Estrato, Distrito, Población FROM fn2_datos_poblacion;
    ```
 
-5. Listar divisiones con población superior a cierto valor:
+5. Listar las fechas de venta y sus estados:
    ```sql
-   SELECT División, Población FROM fn2_division WHERE Población > 50000;
+   SELECT Fecha_de_Venta, Fecha_Estado FROM fn2_fechas;
    ```
 
 6. Encontrar fechas de venta para un asesor específico:
