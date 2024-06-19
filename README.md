@@ -251,7 +251,7 @@ Para crear el diagrama y dar las llaves, se realizo por medio de Workbeanch
 
 4. Obtener detalles de población por estrato y distrito:
    ```sql
-   SELECT Estrato, Distrito, Población FROM fn2_datos_poblacion;
+   SELECT Estrato, Distrito, PoblaciÃ³n FROM fn2_datos_poblacion;
    ```
 
 5. Listar las fechas de venta y sus estados:
